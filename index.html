@@ -1,10 +1,11 @@
 <div id="flip">
-    <p id="">Baslangic Parasi = 100</p>
-    <button id="Heads" type="button">Heads</button>
-    <button id="Tails" type="button">Tails</button>
+    <h1> 
+    <p id="">Starting Money = 100</p>
+    <button id="Heads" style="height: 10em; width: 10em; font-size: large;" type="button">Heads</button>
+    <button id="Tails" style="height: 10em; width: 10em; font-size: large;"" type="button">Tails</button>
     <p id="p1"></p>
-    <p id="">Kasa = </p>
     <p id="kasa"></p>
+    </h1>
     <div id="result"></div>
 </div>
 
@@ -26,11 +27,11 @@ const onClick = (event) => {
     var flip = roll[Math.floor(Math.random() * roll.length)];
     /* checks if the flip and the pick is the same */
     if (choice == flip) {
-      document.getElementById("p1").innerHTML = "Kazandin";
+      document.getElementById("p1").innerHTML = "You Win";
       money = money + 0.9
       document.getElementById("kasa").innerHTML = money;
     } else {
-      document.getElementById("p1").innerHTML = "Kaybettin";
+      document.getElementById("p1").innerHTML = "You Loss";
       money = money - 0.9
       document.getElementById("kasa").innerHTML = money;
     }

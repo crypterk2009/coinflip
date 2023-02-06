@@ -1,0 +1,43 @@
+<div id="flip">
+    <p id="">Baslangic Parasi = 100</p>
+    <button id="Heads" type="button">Heads</button>
+    <button id="Tails" type="button">Tails</button>
+    <p id="p1"></p>
+    <p id="">Kasa = </p>
+    <p id="kasa"></p>
+    <div id="result"></div>
+</div>
+
+<script>
+
+var money = 100
+
+/* checks for a click event within the div id="flip" */
+const onClick = (event) => {
+  /* checks if a button was clicked */  
+  if (event.target.nodeName === 'BUTTON') {
+    /* gets the ID of the clicked button as string */
+    var choice = event.target.id;
+    /* Array to roll between different strings over then a number */
+    var roll = [
+      'Heads',
+      'Tails'
+    ];
+    var flip = roll[Math.floor(Math.random() * roll.length)];
+    /* checks if the flip and the pick is the same */
+    if (choice == flip) {
+      document.getElementById("p1").innerHTML = "Kazandin";
+      money = money + 0.9
+      document.getElementById("kasa").innerHTML = money;
+    } else {
+      document.getElementById("p1").innerHTML = "Kaybettin";
+      money = money - 0.9
+      document.getElementById("kasa").innerHTML = money;
+    }
+    /* outputs the result */
+
+  }
+}
+document.querySelector('#flip').addEventListener('click', onClick);
+
+</script>

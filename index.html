@@ -29,12 +29,10 @@ const onClick = (event) => {
     if (choice == flip) {
       document.getElementById("p1").innerHTML = "You Win";
       money = money + 0.9;
-      money = money.toFixed(2);
       document.getElementById("kasa").innerHTML = money;
     } else {
       document.getElementById("p1").innerHTML = "You Loss";
       money = money - 1;
-      money = money.toFixed(2);
       document.getElementById("kasa").innerHTML = money;
     }
     /* outputs the result */

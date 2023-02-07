@@ -2,7 +2,7 @@
     <h1> 
     <button id="Heads" style="height: 10em; width: 10em; font-size: large;" type="button">Heads</button>
     <button id="Tails" style="height: 10em; width: 10em; font-size: large;" type="button">Tails</button>
-    <p id="">Starting Money = 0</p>
+    <p id="">Start = 0</p>
     <p id="p1"></p>
     <p id="kasa"></p>
     </h1>
@@ -29,12 +29,12 @@ const onClick = (event) => {
     if (choice == flip) {
       document.getElementById("p1").innerHTML = "You Win";
       money = money + 0.9
-      money.toFixed(2);
+      money = money.toFixed(2);
       document.getElementById("kasa").innerHTML = money;
     } else {
       document.getElementById("p1").innerHTML = "You Loss";
       money = money - 1
-      money.toFixed(2);
+      money = money.toFixed(2);
       document.getElementById("kasa").innerHTML = money;
     }
     /* outputs the result */

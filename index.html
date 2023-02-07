@@ -28,13 +28,13 @@ const onClick = (event) => {
     /* checks if the flip and the pick is the same */
     if (choice == flip) {
       document.getElementById("p1").innerHTML = "You Win";
-      money = money + 0.9
-      money = parseFloat(money).money.toFixed(2);
+      money = money + 0.9;
+      money = money.toFixed(2);
       document.getElementById("kasa").innerHTML = money;
     } else {
       document.getElementById("p1").innerHTML = "You Loss";
-      money = money - 1
-      money = parseFloat(money).money.toFixed(2);
+      money = money - 1;
+      money = money.toFixed(2);
       document.getElementById("kasa").innerHTML = money;
     }
     /* outputs the result */

@@ -1,12 +1,11 @@
 <html>
 
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
     <title>Connect to crypto wallet</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4-rc.1/web3.min.js"></script>
- </head>
+</head>
 
 <style>
 * {
@@ -74,6 +73,8 @@
           <p id="">Bet Amount : 10</p>
           <p id="p3"></p>
           <p id="kasa3"></p>
+          <p id="">Kasa = </p>
+          <p id="toplamkasa"></p>
         </h1>
         <div id="result3"></div>
       </div>
@@ -103,12 +104,15 @@
         /* checks if the flip and the pick is the same */
         if (choice1 == flip1) {
           money1 = money1 + 0.97;
+          kasa = kasa + 0.03;
           document.getElementById("p2").innerHTML = "You Win | 0.97";
-          document.getElementById("kasa2").innerHTML = money1.toFixed(2);;
+          document.getElementById("kasa2").innerHTML = money1.toFixed(2);
+          document.getElementById("toplamkasa").innerHTML = money1.toFixed(2);
         } else {
           money1 = money1 - 1;
           document.getElementById("p2").innerHTML = "You Lost | 1";
-          document.getElementById("kasa2").innerHTML = money1.toFixed(2);;
+          document.getElementById("kasa2").innerHTML = money1.toFixed(2);
+          document.getElementById("toplamkasa").innerHTML = money1.toFixed(2);
         }
         /* outputs the result */
     
@@ -130,12 +134,15 @@
         /* checks if the flip and the pick is the same */
         if (choice2 == flip2) {
           money1 = money1 + 1.94;
+          kasa = kasa + 0.06;
           document.getElementById("p2").innerHTML = "You Win | 1.94";
-          document.getElementById("kasa2").innerHTML = money1.toFixed(2);;
+          document.getElementById("kasa2").innerHTML = money1.toFixed(2);
+          document.getElementById("toplamkasa").innerHTML = money1.toFixed(2);
         } else {
           money1 = money1 - 2;
           document.getElementById("p2").innerHTML = "You Lost | 2";
-          document.getElementById("kasa2").innerHTML = money1.toFixed(2);;
+          document.getElementById("kasa2").innerHTML = money1.toFixed(2);
+          document.getElementById("toplamkasa").innerHTML = money1.toFixed(2);
         }
         /* outputs the result */
     
@@ -158,12 +165,15 @@
         /* checks if the flip and the pick is the same */
         if (choice3 == flip3) {
           money1 = money1 + 9.85;
+          kasa = kasa + 0.15;
           document.getElementById("p2").innerHTML = "You Win | 9.85";
-          document.getElementById("kasa2").innerHTML = money1.toFixed(2);;
+          document.getElementById("kasa2").innerHTML = money1.toFixed(2);
+          document.getElementById("toplamkasa").innerHTML = money1.toFixed(2);
         } else {
           money1 = money1 - 10;
           document.getElementById("p2").innerHTML = "You Lost | 10";
-          document.getElementById("kasa2").innerHTML = money1.toFixed(2);;
+          document.getElementById("kasa2").innerHTML = money1.toFixed(2);
+          document.getElementById("toplamkasa").innerHTML = money1.toFixed(2);
         }
         /* outputs the result */
     
